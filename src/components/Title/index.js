@@ -47,7 +47,7 @@ export default function Title({ title, listId }) {
             className="list-button"
             onClick={() => setOpenOptions(!openOptions)}
           >
-            <MoreVert />
+            <MoreVert className="list-button-icon" />
           </button>
           {openOptions && (
             <ClickOutHandler

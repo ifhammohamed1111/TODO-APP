@@ -9,6 +9,7 @@ import store from "../utils/store";
 import StoreApi from "../utils/storeApi";
 
 import "./styles.scss";
+import { Card, Grid } from "@material-ui/core";
 
 const dataStorage = JSON.parse(window.localStorage.getItem("dataKanban"));
 
@@ -241,21 +242,33 @@ export default function Home() {
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="app" type="list" direction="horizontal">
           {(provided) => (
-            <div
+            <Grid
+              container
               className="wrapper"
               ref={provided.innerRef}
               {...provided.droppableProps}
+              spacing={2}
             >
               {data.listIds.map((listId, index) => {
                 const list = data.lists[listId];
 
-                return <List list={list} key={listId} index={index} />;
+                return (
+                  <Grid item key={listId} xs={12} sm={6} md={4} lg={3}>
+                    <Card>
+                      <List list={list} index={index} />
+                    </Card>
+                  </Grid>
+                );
               })}
-              <div>
-                <InputContainer type="list" />
-              </div>
+
+              <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Card>
+                  <InputContainer type="list" />
+                </Card>
+              </Grid>
+
               {provided.placeholder}
-            </div>
+            </Grid>
           )}
         </Droppable>
       </DragDropContext>
