@@ -7,9 +7,11 @@
 
   margin: 0.5rem 0 0;
 
-  background: #fff;
+  color: #ccc;
+  background: #400416;
   border-radius: 3px;
   border-bottom: 1px solid #ccc;
+  font-weight: 400;
 
   position: relative;
 
@@ -39,13 +41,14 @@
       background: none;
       border: none;
       cursor: pointer;
+      color: #ccc;
 
       svg {
         opacity: 0;
         transition: color 0.2s, opacity 0.2s;
 
         &:hover {
-          color: #e22bba;
+          color: #348d8b;
         }
       }
     }
@@ -75,7 +78,7 @@
     transition: border-color 0.2s;
 
     &:focus {
-      border: 1px solid #e22bba;
+      border: 1px solid #348d8b;
     }
   }
 }
