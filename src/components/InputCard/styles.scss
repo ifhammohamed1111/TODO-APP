@@ -11,7 +11,7 @@
       width: 100%;
       height: 4rem;
 
-      background-color: #fff;
+      background-color: #400416;
       padding: 0.5rem;
       font-size: 15px;
       border: none;
@@ -40,7 +40,7 @@
       margin-right: 0.5rem;
 
       &:hover {
-        background-color: #e22bba;
+        background-color: #348d8b;
       }
     }
 
@@ -52,7 +52,7 @@
       svg {
         transition: color 0.3s;
         &:hover {
-          color: #e22bba;
+          color: #348d8b;
         }
       }
     }
